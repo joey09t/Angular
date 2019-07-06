@@ -1,0 +1,20 @@
+<!--Employee Id is{{empId}} <br/>
+Employee Name is{{empName}}<br/>
+Employee Salary is{{empSalary}} <br/>-->
+
+<table border="10">
+    <tr>
+        <th> <input type="button" value="ID" (click)="SortById()"/></th>
+        <th> <input type="button" value="NAME" (click)="SortByName()"/></th>
+        <th> <input type="button" value="SALARY" (click)="SortBySalary()"/></th>
+        <th> <input type="button" value="DEPARTMENT" (click)="SortByDepartment()"/></th>
+    </tr>
+
+    <tr *ngFor="let data of empAll; let i=index">
+        <td>{{data.empId}}</td>
+        <td>{{data.empName}}</td>
+        <td>{{data.empSalary}}</td>
+        <td>{{data.empDepartment}}</td>
+      <!--  <td><input type="button" value="DELETE" (click)="deleteEmployee(i)"/></td> --><!--To delete particular value-->
+    </tr>
+</table>
