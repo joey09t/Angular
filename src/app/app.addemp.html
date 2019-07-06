@@ -1,0 +1,109 @@
+<h3>Add Employee</h3>
+<table>
+    <tr>
+        <td>
+          Id
+        </td>
+        <td>
+          <input type="text" [(ngModel)]="empId"/> 
+        </td>
+    </tr>
+    
+    <tr>
+      <td>
+        Name
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="empName"/>
+      </td>
+  </tr>
+  <tr>
+      <td>
+        Salary
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="empSal"/>
+      </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Department
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="empDep"/>
+    </td>
+</tr>
+  <tr>
+      <td>
+          <input type="button" value="Add Employee" (click)="addEmployee()" />
+      </td>
+  </tr>
+</table>
+
+<br><br>
+<h3>Show all Employee</h3>
+
+<table border=1 >
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Department</th>
+        <th colspan="2">Action</th>  
+    </tr>
+
+    <tr *ngFor="let data of empAll;let i=index">
+      <td>{{data.empId}}</td>
+      <td>{{data.empName}}</td>
+      <td>{{data.empSal}}</td>
+      <td>{{data.empDep}}</td>
+      
+      <td><input type="button" value="UPDATE" (click)="putEmployee(i)"/></td>
+      <td><input type="button" value="DELETE" (click)="deleteEmployee(i)"/></td>
+      
+    </tr>
+</table>
+<br><br>
+<h3>Update Employee</h3>
+<table>
+    <tr>
+        <td>
+          Id
+        </td>
+        <td>
+          <input type="text"  [(ngModel)]="uempId"/> 
+        </td>
+    </tr>
+    
+    <tr>
+      <td>
+        Name
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="uempName" />
+      </td>
+  </tr>
+  <tr>
+      <td>
+        Salary
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="uempSal"/>
+      </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Department
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="uempDep"/>
+    </td>
+</tr>
+  <tr>
+      <td>
+          <input type="button" value="Update Employee" (click)="updateEmployee()" />
+      </td>
+  </tr>
+</table>
